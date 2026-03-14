@@ -88,7 +88,7 @@ def fetch_player_info(uid, region):
     try:
         # Pass both uid and region to the external API
         api_url = f"https://re-toxic-ff-info.vercel.app/player-info?uid={uid}&region={region}"
-        response = requests.get(api_url, timeout=20)
+        response = requests.get(api_url, timeout=120)
         
         if response.status_code != 200:
             return {"success": False, "message": "API Server Error"}
@@ -100,7 +100,7 @@ def fetch_player_info(uid, region):
         return {"success": True, "data": data}
         
     except requests.Timeout:
-        return {"success": False, "message": "API Timeout (20s exceeded)"}
+        return {"success": False, "message": "API Timeout (120s exceeded)"}
     except Exception as e:
         return {"success": False, "message": f"Unexpected Error: {str(e)}"}
 
