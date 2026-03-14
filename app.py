@@ -113,7 +113,7 @@ def home():
             "/level?uid=<uid>&region=<region>": "Get level progress for player",
             "/levels": "Get all level EXP requirements"
         },
-        "credit": "@juli_dvrma"
+        "credit": "@RE_TOXIC"
     })
 
 # ===== Modified Endpoint: Now uses Query Parameters =====
