@@ -90,7 +90,7 @@ def fetch_player_info(uid):
     
     for region in regions:
         try:
-            api_url = f"https://re-toxic-ff-info.vercel.app/player-info?uid={uid}&region={region}"
+            api_url = f"https://kirito-info.vercel.app/player-info?uid={uid}&region={region}"
             response = requests.get(api_url, timeout=10) # Shorter timeout per request for scanning
             
             if response.status_code == 200:
