@@ -87,7 +87,7 @@ def fetch_player_info(uid, region):
     """Fetch player info from external API"""
     try:
         # Pass both uid and region to the external API
-        api_url = f"https://re-toxic-ff-info.vercel.app/player-info?uid={uid}&region={region}"
+        api_url = f"https://kirito-info.vercel.app/player-info?uid={uid}&region={region}"
         response = requests.get(api_url, timeout=120)
         
         if response.status_code != 200:
